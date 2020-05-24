@@ -1,6 +1,6 @@
 <?php
 
-include('cars.php');
+include('carcharts.php');
 session_start();
 
 if (isset($_POST['register'])) {
@@ -10,7 +10,7 @@ if (isset($_POST['register'])) {
     $password = $_POST['password'];
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
-    $query = $connection->prepare("SELECT * FROM cars WHERE EMAIL=:email");
+    $query = $connection->prepare("SELECT * FROM carcharts WHERE EMAIL=:email");
     $query->bindParam("email", $email, PDO::PARAM_STR);
     $query->execute();
 
@@ -26,8 +26,8 @@ if (isset($_POST['register'])) {
         $result = $query->execute();
 
         if ($result) {
-			header('Location: login.php');
-            //echo '<p class="success">Your registration was successful!</p>';
+			  header('Location: login.php');
+            echo '<p class="success">Your registration was successful!</p>';
         } else {
             echo '<p class="error">Something went wrong!</p>';
         }
@@ -35,6 +35,9 @@ if (isset($_POST['register'])) {
 }
 
 ?>
+
+
+
 <html>
 
 <head>
