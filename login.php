@@ -36,7 +36,7 @@ if (isset($_POST['login'])){
 
 <head>
   <meta charset="utf-8"/>
-  <title>Cars</title>
+  <title>carcharts</title>
   <link rel="stylesheet" href="style.css">
 </head>
 

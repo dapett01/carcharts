@@ -4,10 +4,13 @@
   $username = $_POST["username"];
   if (isset($checkbox) && isset($email))
   {
+    setcookie("username" , $remember , time() + (86400 * 2));
     setcookie("email" , $email , time() + (86400 * 2));
-    setcookie("username" , $username , time() + (86400 * 2));
   }
 ?>
+
+
+<!doctype html>
 
 <html lang="sv">
 

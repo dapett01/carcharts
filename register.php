@@ -26,7 +26,7 @@ if (isset($_POST['register'])) {
         $result = $query->execute();
 
         if ($result) {
-			header('Location: login.php');
+			  header('Location: login.php');
             echo '<p class="success">Your registration was successful!</p>';
         } else {
             echo '<p class="error">Something went wrong!</p>';
@@ -35,6 +35,9 @@ if (isset($_POST['register'])) {
 }
 
 ?>
+
+
+
 <html>
 
 <head>

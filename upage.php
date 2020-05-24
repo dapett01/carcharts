@@ -1,6 +1,5 @@
 <?php
-
-include('carscharts.php');
+include('carcharts.php');
 session_start();
 
 if(!isset($_SESSION['user_id'])) {
@@ -10,5 +9,4 @@ if(!isset($_SESSION['user_id'])) {
 else {
   echo '<p class="success">You are now loged in!</p>';
 }
-
 ?>
