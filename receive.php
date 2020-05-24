@@ -1,12 +1,17 @@
 <?php
+
   $checkbox = $_POST["remember"];
   $email = $_POST["email"];
   $username = $_POST["username"];
   if (isset($checkbox) && isset($email))
   {
+
+        //Detta är koden på hur länge och att den ska komma ihåh vad man skrivit
+
     setcookie("username" , $remember , time() + (86400 * 2));
     setcookie("email" , $email , time() + (86400 * 2));
   }
+
 ?>
 
 
@@ -18,6 +23,8 @@
     <meta charset="utf-8">
     <title>receive.php</title>
   </head>
+
+          <!-- Koden nedan används för att att sidan ska komma ihåg vad man har skrivit -->
 
   <body>
     <?php

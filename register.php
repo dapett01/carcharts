@@ -4,10 +4,11 @@ include('carcharts.php');
 session_start();
 
 if (isset($_POST['register'])) {
-
+          //Koden nedan gör det möjlgt att samla in datan från HTML data som använder method="post"
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+          //Koden nedan gör det möjligt att kunna kryptera lösenordet
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
     $query = $connection->prepare("SELECT * FROM carcharts WHERE EMAIL=:email");
@@ -36,7 +37,8 @@ if (isset($_POST['register'])) {
 
 ?>
 
-
+          <!-- Koden under används för att bygga upp en struktur på en registrering sida. Så man enkelt kan registrera sig -->
+          <!-- Vi har gjort så att man är tvugnen att fylla i alla fält, därav anledningen till "required" under de olika divarna -->
 
 <html>
 

@@ -1,5 +1,5 @@
 <?php
-
+              //Koden används för att kunna logga in på hemsidan
 include('carcharts.php');
 session_start();
 
@@ -20,6 +20,8 @@ if (isset($_POST['login'])){
     	    else{
               if (password_verify($password, $result['password']))
       		{
+
+              //Koden gör så att man antingen försvidare till hemsidan om man skrivit in rätt information eller så stannart man kvar och måste srkiva om inloggnings inforationen om man skrivit fel
               $_SESSION['user_id'] = $result['username'];
               header('Location: upage.php');
           }
@@ -31,6 +33,9 @@ if (isset($_POST['login'])){
 }
 
 ?>
+
+
+            <!-- Koden under används för att bygga upp en struktur på en inloggnings sida. Så man enkelt kan logga in -->
 
 <html lang="sv">
 
