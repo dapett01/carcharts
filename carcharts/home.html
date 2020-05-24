@@ -1,0 +1,49 @@
+<?php
+include('carcharts.php');
+session_start();
+
+if(!isset($_SESSION['user_id'])) {
+  header('Location: login.php');
+  exit;
+}
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CarCharts</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="home.css">
+	</head>
+	<body>
+		<div class="nav">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="abouts.html">About the site</a></li>
+			<li><a href="cars.php">Compare Cars</a></li>
+			<li><a href="aboutus.html">About us</a></li>
+			
+		</div>
+
+		<div class="title">
+			<h1>CarCharts</h1>
+		</div>
+		
+		<div class="pic1">
+			<img src="cc.jpg" alt="nordschleife" width="900" height="500"/></a>
+		</div>
+		
+		<div class="text">
+			<p>
+			Please visit our instagram pages at @porscheobsessive & @my944s for further questions or suggestions
+			</p>
+		</div>
+		
+		</div>
+			<div class="footer">
+				<p>
+					
+				</p>
+		</div>
+	</body>
+</html>
